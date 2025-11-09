@@ -1,0 +1,7 @@
+{
+  "name": "POS",
+  "description": "Una aplicación avanzada de Punto de Venta (POS) para gestionar pedidos de restaurantes, procesar pagos y ver estadísticas de ventas. Se conecta a una base de datos de Baserow y es compatible con impresoras térmicas.",
+  "requestFramePermissions": [
+    "usb"
+  ]
+}
