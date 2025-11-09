@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { CheckIcon, XMarkIcon } from './icons/Icons';
 

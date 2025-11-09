@@ -1,4 +1,3 @@
-
 export interface AppConfig {
   empresaNombre: string;
   empresaTelefono: string;

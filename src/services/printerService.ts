@@ -73,10 +73,6 @@ class ESCPOSPrinter {
         return Array.from(encoder.encode(str));
     }
     
-    private generateTicketCommands(ticketData: any, config: AppConfig, generator: (data: any, config: AppConfig) => Uint8Array): Uint8Array {
-      return generator(ticketData, config);
-    }
-
     private generateComandaCommands(ticketData: any, config: AppConfig): Uint8Array {
         const commands: number[] = [];
         const push = (...args: number[]) => commands.push(...args);
@@ -334,9 +330,6 @@ export const printZReport = async (config: AppConfig, ventasData: Venta[]) => {
 
     if (config.printerType === 'escpos' && printer.isConnected) {
         const commands = generateZReportCommands({ ...reportData, empresaNombre: config.empresaNombre }, config);
-        // We need a way to send raw commands. Let's add sendCommand to the class and use it.
-        // For now, let's create a temporary method inside the printer class for this.
-        // It's cleaner to expose a method.
         await (printer as any).sendCommand(commands);
     } else {
         printZReportBrowser(config, ventasData);

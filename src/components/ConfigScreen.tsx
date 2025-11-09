@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AppConfig, ToastState, PrinterInfo } from '../types';
+import { AppConfig, PrinterInfo } from '../types';
 import { BuildingStorefrontIcon, Cog6ToothIcon, CreditCardIcon, PrinterIcon, ServerStackIcon } from './icons/Icons';
 import { detectUSBPrinter } from '../services/printerService';
 
